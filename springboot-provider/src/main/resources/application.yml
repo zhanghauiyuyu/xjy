@@ -1,0 +1,19 @@
+server:
+  servlet:    context-path: /1807
+  port: 8081
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://192.168.1.183:3306/blog?serverTimezone=UTC
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    generate-ddl: false
+  mvc:
+    view:
+      suffix: ".jsp"
+      prefix: "/WEB-INF/"
