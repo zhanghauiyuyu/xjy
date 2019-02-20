@@ -1,0 +1,10 @@
+server:
+  servlet:
+    context-path: /login
+  port: 8080
+
+spring:
+  mvc:
+    view:
+      suffix: ".jsp"
+      prefix: "/WEB-INF/"

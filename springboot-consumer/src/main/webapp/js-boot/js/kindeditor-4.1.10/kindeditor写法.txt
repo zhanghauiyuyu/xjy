@@ -1,0 +1,16 @@
+
+<!-- kindeditor插件的使用 -->
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/kindeditor-4.1.10/kindeditor.js" charset="utf-8"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath }/js/kindeditor-4.1.10/lang/zh_CN.js" charset="utf-8"></script>
+
+<!-- kindeditor插件的使用 'textarea[name="movieIntroduce"]  属性选择器选择对应的文本域 ，将name名称对应就ok了-->
+var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="movieIntroduce"]', {
+			uploadJson: "${pageContext.request.contextPath}/js/kindeditor-4.1.10/jsp/upload_json.jsp",
+			fileManagerJson: "${pageContext.request.contextPath}/js/kindeditor-4.1.10/jsp/file_manager_json.jsp",
+			allowFileManager : true,
+			//将富文本编辑中的内容同步到表单序列化中
+			afterBlur:function(){this.sync();}
+		});
+	});
